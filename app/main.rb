@@ -10,11 +10,10 @@ require 'byebug'
 
 def list
   a = List.all
-  n = 0
   a.each do |x|
   
     puts "#{x.id}  #{x.name}  #{x.phone}  #{x.address} " 
-    n += 1
+   
   end
     
 end

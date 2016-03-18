@@ -26,9 +26,11 @@ require 'byebug'
 
 def list 
   a = List.all
+  puts "ID".ljust(4)+ "Name".ljust(15) + "Phone".ljust(15) + "Address".ljust(20)
+  puts "===".ljust(4) + "====".ljust(15) + "=====".ljust(15) + "=======".ljust(20)
   a.each do |x|
   
-    puts "#{x.id}  #{x.name}  #{x.phone}  #{x.address} " 
+    puts "#{x.id}.".ljust(4) + "#{x.name}".ljust(15) + "#{x.phone}".ljust(15) + "#{x.address}".ljust(20) 
    
   end
   
@@ -86,3 +88,30 @@ elsif ARGV[0] == "delete"
 elsif ARGV[0] == "update"
   update(ARGV[1].to_i,ARGV[2],ARGV[3],ARGV[4])
 end
+
+# hash = [:id,:name,:phone,:address,:company,:favourite_pokemon]
+# def new_add(hash={})
+#   hash.symbolize_keys!
+#   # id = hash.fetch[:id]
+#   # name = hash.fetch[:name]
+#   # phone = hash.fetch[:phone]
+#   # address = hash.fetch[:address]
+#   # company = hash.fetch[:company]
+#   # favourite_pokemon = hash.fetch[:favourite_pokemon]
+
+
+
+  
+#   all = list.where(id: id)
+#   person = all[0]
+#   person.name = name
+#   person.phone = phone
+#   person.address = address
+#   person.company = company
+#   person.favourite_pokemon = favourite_pokemon
+
+#   person.save
+# end
+
+
+# new_add(id:2,company:"Next")
